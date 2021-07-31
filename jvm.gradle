@@ -29,7 +29,7 @@
 
 def _jdk_version = '1.8'
 
-if (null != gradle.versions && null != gradle.versions.jdk && !gradle.versions.jdk.isEmpty()) {
+if (null != gradle.versions && null != gradle.versions.jdk) {
     _jdk_version = gradle.versions.jdk
 }
 
