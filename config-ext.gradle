@@ -22,8 +22,6 @@
  * SOFTWARE.
  */
 
-apply from: 'config.gradle'
-
 gradle.ext {
     encoding = 'UTF-8'
 
