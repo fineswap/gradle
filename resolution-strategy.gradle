@@ -23,8 +23,6 @@
  */
 
 allprojects {
-    apply from: "$rootDir/gradle/config.gradle"
-
     if (null != gradle.overrides && !gradle.overrides.isEmpty()) {
         configurations.all {
             resolutionStrategy {
