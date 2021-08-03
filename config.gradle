@@ -203,9 +203,8 @@ try {
         versions = _versions
         overrides = _overrides
     }
-    System.out.println('Successfully set extra properties on "project".')
 } catch (Exception ignored) {
-    System.out.println('WARNING: unable to set extra properties on "project".')
+    // N/A.
 }
 
 // Expose to rootProject's scope.
@@ -215,9 +214,8 @@ try {
         versions = _versions
         overrides = _overrides
     }
-    System.out.println('Successfully set extra properties on "gradle".')
 } catch (Exception ignored) {
-    System.out.println('WARNING: unable to set extra properties on "gradle".')
+    // N/A.
 }
 
 // Expose to current scope.
@@ -227,7 +225,6 @@ try {
         versions = _versions
         overrides = _overrides
     }
-    System.out.println('Successfully set extra properties on "ext".')
 } catch (Exception ignored) {
-    System.out.println('WARNING: unable to set extra properties on "ext".')
+    // N/A.
 }
