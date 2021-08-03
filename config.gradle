@@ -197,28 +197,34 @@ final _overrides = [
 ]
 
 // Expose to project's scope.
-if (null != this.project) {
-    this.project.ext {
+try {
+    project.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
     }
+} catch (Exception ignored) {
+    // N/A.
 }
 
 // Expose to rootProject's scope.
-if (null != this.rootProject) {
+try {
     this.rootProject.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
     }
+} catch (Exception ignored) {
+    // N/A.
 }
 
 // Expose to current scope.
-if (null != this.ext) {
+try {
     this.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
     }
+} catch (Exception ignored) {
+    // N/A.
 }
