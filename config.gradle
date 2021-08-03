@@ -198,7 +198,7 @@ final _overrides = [
 
 // Expose to project's scope.
 if (null != this.project) {
-    project.ext {
+    this.project.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
@@ -207,7 +207,7 @@ if (null != this.project) {
 
 // Expose to rootProject's scope.
 if (null != this.rootProject) {
-    rootProject.ext {
+    this.rootProject.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
