@@ -113,7 +113,7 @@ final _versions = [
 ]
 
 // Expose to global scope.
-gradle.ext {
+project.ext {
     encoding = 'UTF-8'
 
     versions = _versions
