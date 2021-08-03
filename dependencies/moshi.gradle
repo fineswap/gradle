@@ -23,7 +23,7 @@
  */
 
 if (null == project.versions || null == project.versions.jdk) {
-    project.logger.warning('Script moshi.gradle is not loaded because config.gradle is not loaded.')
+    System.out.println('Script moshi.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
         implementation "com.squareup.moshi:moshi-kotlin:${project.versions.squareup_moshi}"

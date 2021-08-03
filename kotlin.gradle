@@ -23,7 +23,7 @@
  */
 
 if (null == project.versions || null == project.versions.jdk) {
-    project.logger.warning('Script kotlin.gradle is not loaded because config.gradle is not loaded.')
+    System.out.println('Script kotlin.gradle is not loaded because config.gradle is not loaded.')
 } else {
     apply plugin: 'kotlin'
     apply plugin: 'kotlin-kapt'

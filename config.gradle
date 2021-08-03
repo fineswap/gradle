@@ -204,12 +204,12 @@ try {
         overrides = _overrides
     }
 } catch (Exception ignored) {
-    // N/A.
+
 }
 
 // Expose to rootProject's scope.
 try {
-    this.rootProject.ext {
+    rootProject.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
@@ -220,7 +220,7 @@ try {
 
 // Expose to current scope.
 try {
-    this.ext {
+    ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides

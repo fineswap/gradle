@@ -38,4 +38,4 @@ if (null != project.versions && null != project.versions.jdk) {
 sourceCompatibility = _jdk_version
 targetCompatibility = _jdk_version
 
-project.logger.info("Source and target Java compatibility version set to $_jdk_version")
+System.out.println("Source and target Java compatibility version set to $_jdk_version")

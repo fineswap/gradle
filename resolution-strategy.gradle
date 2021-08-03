@@ -42,13 +42,13 @@ allprojects {
                             if (moduleVersion != '+' && null == otherVersion) {
                                 conflictingVersions[module] = moduleVersion
                             } else if (moduleVersion != '+' && otherVersion != moduleVersion) {
-                                project.logger.warning("POSSIBLE CONFLICTING VERSION FOR '$module'")
-                                project.logger.warning("- VERSION 1: $otherVersion")
-                                project.logger.warning("- VERSION 2: $moduleVersion")
+                                System.out.println("POSSIBLE CONFLICTING VERSION FOR '$module'")
+                                System.out.println("- VERSION 1: $otherVersion")
+                                System.out.println("- VERSION 2: $moduleVersion")
                             }
                         } else if (moduleVersion != '+' && version != moduleVersion) {
                             force "$module:$version"
-                            project.logger.info("Enforcing dependency '$module' version '$version' (old version: '$moduleVersion')")
+                            System.out.println("Enforcing dependency '$module' version '$version' (old version: '$moduleVersion')")
                         }
                     }
                 }
@@ -56,4 +56,3 @@ allprojects {
         }
     }
 }
-
