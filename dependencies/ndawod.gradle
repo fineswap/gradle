@@ -22,12 +22,12 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script ndawod.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "com.github.ndawod:kotlin-core:${gradle.versions.ndawod_kotlin_core}"
-        implementation "com.github.ndawod:kotlin-orm:${gradle.versions.ndawod_kotlin_orm}"
-        implementation "com.github.ndawod:kotlin-restful:${gradle.versions.ndawod_kotlin_restful}"
+        implementation "com.github.ndawod:kotlin-core:${project.versions.ndawod_kotlin_core}"
+        implementation "com.github.ndawod:kotlin-orm:${project.versions.ndawod_kotlin_orm}"
+        implementation "com.github.ndawod:kotlin-restful:${project.versions.ndawod_kotlin_restful}"
     }
 }

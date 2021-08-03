@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script okhttp3.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "com.squareup.okhttp3:okhttp:${gradle.versions.squareup_okhttp3}"
-        implementation "com.squareup.okio:okio:${gradle.versions.squareup_okio}"
+        implementation "com.squareup.okhttp3:okhttp:${project.versions.squareup_okhttp3}"
+        implementation "com.squareup.okio:okio:${project.versions.squareup_okio}"
     }
 }

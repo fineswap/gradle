@@ -22,11 +22,11 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script ormlite.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "com.j256.ormlite:ormlite-core:${gradle.versions.ormlite_core}"
-        implementation "com.j256.ormlite:ormlite-jdbc:${gradle.versions.ormlite_jdbc}"
+        implementation "com.j256.ormlite:ormlite-core:${project.versions.ormlite_core}"
+        implementation "com.j256.ormlite:ormlite-jdbc:${project.versions.ormlite_jdbc}"
     }
 }

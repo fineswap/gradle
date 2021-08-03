@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script simplemail.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "org.simplejavamail:simple-java-mail:${gradle.versions.simplemail}"
+        implementation "org.simplejavamail:simple-java-mail:${project.versions.simplemail}"
     }
 }

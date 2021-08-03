@@ -31,8 +31,8 @@ apply plugin: 'java'
 
 def _jdk_version = '1.8'
 
-if (null != gradle.versions && null != gradle.versions.jdk) {
-    _jdk_version = gradle.versions.jdk
+if (null != project.versions && null != project.versions.jdk) {
+    _jdk_version = project.versions.jdk
 }
 
 sourceCompatibility = _jdk_version

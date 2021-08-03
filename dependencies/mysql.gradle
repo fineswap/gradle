@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script mysql.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "mysql:mysql-connector-java:${gradle.versions.mysql}"
+        implementation "mysql:mysql-connector-java:${project.versions.mysql}"
     }
 }

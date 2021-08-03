@@ -51,6 +51,6 @@ detekt {
 }
 
 dependencies {
-    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:${gradle.versions.plugin_detekt}"
-    detekt "io.gitlab.arturbosch.detekt:detekt-cli:${gradle.versions.detekt}"
+    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:${project.versions.plugin_detekt}"
+    detekt "io.gitlab.arturbosch.detekt:detekt-cli:${project.versions.detekt}"
 }

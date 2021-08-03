@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script kotlin.gradle is not loaded because config.gradle is not loaded.')
 } else {
     apply plugin: 'kotlin'
@@ -35,18 +35,18 @@ if (null == gradle.versions || null == gradle.versions.jdk) {
     }
 
     compileKotlin {
-        kotlinOptions.jvmTarget = gradle.versions.jdk
+        kotlinOptions.jvmTarget = project.versions.jdk
     }
 
     compileTestKotlin {
-        kotlinOptions.jvmTarget = gradle.versions.jdk
+        kotlinOptions.jvmTarget = project.versions.jdk
     }
 
     dependencies {
-        implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${gradle.versions.kotlin}"
-        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${gradle.versions.kotlin}"
-        implementation "org.jetbrains.kotlin:kotlin-reflect:${gradle.versions.kotlin_reflect}"
-        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${gradle.versions.kotlin_coroutines}"
-        implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:${gradle.versions.kotlin_serialization}"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${project.versions.kotlin}"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${project.versions.kotlin}"
+        implementation "org.jetbrains.kotlin:kotlin-reflect:${project.versions.kotlin_reflect}"
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${project.versions.kotlin_coroutines}"
+        implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:${project.versions.kotlin_serialization}"
     }
 }

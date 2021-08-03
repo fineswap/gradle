@@ -22,10 +22,10 @@
  * SOFTWARE.
  */
 
-if (null == gradle.versions || null == gradle.versions.jdk) {
+if (null == project.versions || null == project.versions.jdk) {
     project.logger.warning('Script httpclient5.gradle is not loaded because config.gradle is not loaded.')
 } else {
     dependencies {
-        implementation "org.apache.httpcomponents.client5:httpclient5:${gradle.versions.apache_httpclient5}"
+        implementation "org.apache.httpcomponents.client5:httpclient5:${project.versions.apache_httpclient5}"
     }
 }
