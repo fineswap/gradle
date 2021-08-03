@@ -209,7 +209,7 @@ try {
 
 // Expose to rootProject's scope.
 try {
-    rootProject.ext {
+    gradle.ext {
         encoding = 'UTF-8'
         versions = _versions
         overrides = _overrides
